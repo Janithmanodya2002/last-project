@@ -1,14 +1,14 @@
 namespace last_project
 {
-    partial class Form1
+    partial class RegistrationForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,8 +23,8 @@ namespace last_project
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -60,7 +60,9 @@ namespace last_project
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtRegNo = new System.Windows.Forms.TextBox();
+            this.cmbRegNo = new System.Windows.Forms.ComboBox();
+            this.linkLogout = new System.Windows.Forms.LinkLabel();
+            this.linkExit = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -214,8 +216,9 @@ namespace last_project
             // txtAddress
             //
             this.txtAddress.Location = new System.Drawing.Point(120, 25);
+            this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(200, 20);
+            this.txtAddress.Size = new System.Drawing.Size(200, 40);
             this.txtAddress.TabIndex = 4;
             //
             // label9
@@ -366,17 +369,43 @@ namespace last_project
             this.label13.TabIndex = 8;
             this.label13.Text = "Reg No";
             //
-            // txtRegNo
+            // cmbRegNo
             //
-            this.txtRegNo.Location = new System.Drawing.Point(80, 47);
-            this.txtRegNo.Name = "txtRegNo";
-            this.txtRegNo.Size = new System.Drawing.Size(100, 20);
-            this.txtRegNo.TabIndex = 9;
+            this.cmbRegNo.FormattingEnabled = true;
+            this.cmbRegNo.Location = new System.Drawing.Point(80, 47);
+            this.cmbRegNo.Name = "cmbRegNo";
+            this.cmbRegNo.Size = new System.Drawing.Size(121, 21);
+            this.cmbRegNo.TabIndex = 9;
+            this.cmbRegNo.SelectedIndexChanged += new System.EventHandler(this.cmbRegNo_SelectedIndexChanged);
             //
-            // Form1
+            // linkLogout
+            //
+            this.linkLogout.AutoSize = true;
+            this.linkLogout.Location = new System.Drawing.Point(12, 9);
+            this.linkLogout.Name = "linkLogout";
+            this.linkLogout.Size = new System.Drawing.Size(40, 13);
+            this.linkLogout.TabIndex = 10;
+            this.linkLogout.TabStop = true;
+            this.linkLogout.Text = "Logout";
+            this.linkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogout_LinkClicked);
+            //
+            // linkExit
+            //
+            this.linkExit.AutoSize = true;
+            this.linkExit.Location = new System.Drawing.Point(737, 9);
+            this.linkExit.Name = "linkExit";
+            this.linkExit.Size = new System.Drawing.Size(24, 13);
+            this.linkExit.TabIndex = 11;
+            this.linkExit.TabStop = true;
+            this.linkExit.Text = "Exit";
+            this.linkExit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkExit_LinkClicked);
+            //
+            // RegistrationForm
             //
             this.ClientSize = new System.Drawing.Size(784, 411);
-            this.Controls.Add(this.txtRegNo);
+            this.Controls.Add(this.linkExit);
+            this.Controls.Add(this.linkLogout);
+            this.Controls.Add(this.cmbRegNo);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
@@ -386,8 +415,9 @@ namespace last_project
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "SKILL INTERNATIONAL";
+            this.Name = "RegistrationForm";
+            this.Text = "Student Registration - SKILLS INTERNATIONAL";
+            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -432,6 +462,8 @@ namespace last_project
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtRegNo;
+        private System.Windows.Forms.ComboBox cmbRegNo;
+        private System.Windows.Forms.LinkLabel linkLogout;
+        private System.Windows.Forms.LinkLabel linkExit;
     }
 }
